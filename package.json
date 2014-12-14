@@ -1,0 +1,28 @@
+{
+  "name": "mmrb.github.io",
+  "version": "0.0.1",
+  "description": "wechat web rebuild",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmrb/mmrb.github.io"
+  },
+  "keywords": [
+    "wechat",
+    "web",
+    "rebuild"
+  ],
+  "author": "mmrb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmrb/mmrb.github.io/issues"
+  },
+  "homepage": "https://github.com/mmrb/mmrb.github.io",
+  "devDependencies": {
+    "gulp": "~3.8.10",
+    "gulp-mm": "~0.0.1"
+  }
+}

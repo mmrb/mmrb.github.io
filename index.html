@@ -1,206 +1,129 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="content-type" content="text/html;charset=utf8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
-        <title> mmrb </title>
-        <style type="text/css">
-       /*Web WeChat */
-	html, body{
-	  word-break:normal;
-	  word-wrap:break-word;
-	}
-	.wechat{
-		padding-top: 20px;
-	}
-	/*会话内容窗体*/
-	.chatPanel .chatScorll { height:390px; width:100%; min-height:200px; overflow:hidden; overflow-y:auto; 
-		/*border-bottom:1px solid #bebebe;*/ background-color:#EFF3F7; }
-	
-	.chatPanel .chatContent  { padding:10px; width:100%;overflow: hidden;position:relative;}
-	.you { float:left; width:100%; /*ie6 hack*/_background:none; _border:none;}
-	.me { float:right; width:100%; }
-	.chatItem { padding:4px 0px 10px 0px;_background:none; _border:none; }
-	.chatItemContent{
-		cursor:pointer;
-	}
-	.cloudPannel{
-		position: relative;
-		_position:static;
-	}
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <title>wechat web rebuild team</title>
+    <style>
+*{margin:0;padding:0}.box{padding:15px;overflow:hidden;max-width:850px;margin:0 auto}
+</style>
+    <style>
+.bubble{max-width:500px;display:inline-block;vertical-align:top;position:relative;text-align:left;border:1px solid #cfcfcf;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;padding:10px 13px;margin:0 10px}.bubble.bubble_default{background-color:#fff}.bubble:after,.bubble:before{position:absolute;top:15px;border:7px solid transparent;content:" "}.bubble.left:after,.bubble.left:before{right:100%}.bubble.left:before{border-right-color:#cfcfcf;margin-right:1px}.bubble.left:after{border-right-color:#FFF}.bubble.right:after,.bubble.right:before{left:100%}.bubble.right:before{border-left-color:#000}.bubble.right:after{border-left-color:#FFF}.bubble.bubble_primary{background-color:#9be451;background-image:-moz-linear-gradient(top,#a3e85f 0,#95e247 100%);background-image:-webkit-gradient(linear,0 0,0 100%,from(#a3e85f),to(#95e247));background-image:-webkit-linear-gradient(top,#a3e85f 0,#95e247 100%);background-image:-o-linear-gradient(top,#a3e85f 0,#95e247 100%);background-image:linear-gradient(to bottom,#a3e85f 0,#95e247 100%);border-color:#75bf50}.bubble.bubble_primary.left:before{border-right-color:#000}.bubble.bubble_primary.left:after{border-right-color:#95e247}.bubble.bubble_primary.right:before{border-left-color:#75bf50;margin-left:1px}.bubble.bubble_primary.right:after{border-left-color:#95e247}.bubble_hd{border-bottom:1px solid #cfcfcf;padding-bottom:7px}.bubble_cont{padding-top:7px}.bubble_cont li{overflow:hidden;color:#888}.bubble_cont .avatar{float:left;margin-right:10px;width:60px;height:60px;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px}.bubble_cont .meta,.bubble_cont .msg{float:left}.bubble_cont .msg{margin-left:5px;width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;height:1.6em}.bubble_cont .time{display:none}.bubble_cont .list{overflow:hidden}.bubble.expand li{margin-bottom:15px}.bubble.expand .avatar{display:none}.bubble.expand .meta,.bubble.expand .msg{float:none}.bubble.expand .user{color:#000}.bubble.expand .time{float:right;color:#888;display:block}.bubble.expand .msg{color:#888;width:auto;height:auto;white-space:normal}
+</style>
+    <style>
+.message{margin-bottom:20px;float:left;width:100%}.message .avatar{width:60px;height:60px;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;float:left}.message .content{overflow:hidden}.message.me{float:right;text-align:right;clear:right}.message.me .avatar{float:right}.message.me .content{overflow:hidden}
+</style>
+</head>
+<body>
+<div class="box">
+    <div class="box_hd">
+        <h3></h3>
+    </div>
+    <div class="box_bd">
+        
+        <div class="message ">
+            <img class="avatar" src="./avatar/shenfei.jpg" title="shenfei">
+            <div class="content">
+                <div class="bubble left bubble_default">
+                    <p>hi, I am shenfei.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="message me">
+            <img class="avatar" src="./avatar/rongle.jpg" title="rongle">
+            <div class="content">
+                <div class="bubble right bubble_primary">
+                    <p>hi, I am rongle.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="message ">
+            <img class="avatar" src="./avatar/gaby.jpg" title="gaby">
+            <div class="content">
+                <div class="bubble left bubble_default">
+                    <p>hi, I am gaby.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="message me">
+            <img class="avatar" src="./avatar/aster.jpg" title="aster">
+            <div class="content">
+                <div class="bubble right bubble_primary">
+                    <p>hi, I am aster.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="message ">
+            <img class="avatar" src="./avatar/bear.jpg" title="bear">
+            <div class="content">
+                <div class="bubble left bubble_default">
+                    <p>hi, I am bear.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="message me">
+            <img class="avatar" src="./avatar/xx.jpg" title="xx">
+            <div class="content">
+                <div class="bubble right bubble_primary">
+                    <p>hi, I am xx.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="message ">
+            <img class="avatar" src="./avatar/jf.jpg" title="jf">
+            <div class="content">
+                <div class="bubble left bubble_default">
+                    <p>hi, I am jf.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<script>
+    (function(){
+        WeixinJSBridgeReady(function(){
+            var options = {
+                "img_url": "/avatar/logo.png",
+                "img_width": "108",
+                "img_height": "108",
+                "link": location.href,
+                "desc": '换个姿势切图',
+                "title": '微信重构组'
+            };
+            WeixinJSBridge.on('menu:share:timeline',function(argv){
+                WeixinJSBridge.invoke('shareTimeline', options,function(res){});
+            });
 
-	.chatItem .time { font-size:12px; padding:2px 0; margin:0px auto 10px; width:100px;border-radius:20px; color:#7f7f7f;/*background-color:#EEE;*/ text-shadow:0 1px 0 #fff; }
-	.chatItem .time .timeBg{
-		height: 1px; width: 27px; margin-top: 8px; background-color: #B4B8BD;
-	}
-	.chatItem .avatar {  width:38px; height:38px;border:1px solid #ccc\9;border:1px solid #FFF; box-shadow: 0px 1px 0px #B3B6BA;}
-	.chatItem .cloud {  max-width:300px; /*border-radius:11px; border-width:1px; border-style:solid; */cursor:default;position: static;}
-	.chatItem .cloud{/*for ie*/
-		/*position: relative;*/
-		padding: 0px;
-		margin: 0px;
-	}
-	.chatItem .cloudContent { /* position:relative;for ie*/ text-align:left; /*padding:2px; line-height:1.2; */ font-weight:normal; 
-			font-size:14px; min-height:20px; word-wrap:break-word;   }
-	
-	/*我的气泡*/
-	.me .avatar { float:right;}
-	.me .cloud { /*position:relative;*/ float:right; min-width:50px; max-width:300px; margin:0 15px 0 0;}
-	
-	/*文字气泡*/
-	.me .cloudText .cloudBody { 
-		-moz-border-top-colors:none;
-		-moz-border-right-colors:none;
-		-moz-border-bottom-colors:none;
-		-moz-border-left-colors:none;
-		border-color:transparent;
+            WeixinJSBridge.on('menu:share:appmessage' , function(argv){
+                WeixinJSBridge.invoke('sendAppMessage', options, function(res){})
+            });
+        });
+        /**
+         * WeixinJSBridge Ready
+         * @param {Function} callback
+         * @constructor
+         */
+        function WeixinJSBridgeReady(callback){
+            if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+                callback();
+            } else {
+                if (document.addEventListener) {
+                    document.addEventListener("WeixinJSBridgeReady", callback, false);
+                } else if (document.attachEvent) {
+                    document.attachEvent("WeixinJSBridgeReady", callback);
+                    document.attachEvent("onWeixinJSBridgeReady", callback);
+                }
+            }
+        }
+    })();
+</script>
 
-		border:1px solid #AFAFAF;
-		border-radius:5px;
-		-moz-border-radius:5px;
-		-webkit-border-radius:5px;
-		box-shadow: 0px 1px 0px #D5D5D5;
-
-		border:1px solid #9f9f9f\9;background:#ECECEC\9;border-radius:6px\9;
-		margin-left:8px;
-	}
-	.me .cloudContent { border:1px solid #eee\9; border-top:1px solid #FFF;border-bottom:1px solid #F2F2F2;padding:13px\9;border-radius:13px\9; border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px; overflow:hidden; color:#000; text-shadow:none;  
-		background-color:#ECECEC;
-		
-	background:-webkit-gradient(linear,
-					left top,left bottom,
-					from(#F4F4F4),to(#E5E5E5),
-					color-stop(0.1,#F3F3F3),color-stop(0.3,#F1F1F1),color-stop(0.5,#ECECEC),color-stop(0.7,#E9E9E9),color-stop(0.9,#E6E6E6),color-stop(1.0,#E5E5E5));
-	background-image:-moz-linear-gradient(top, #F3F3F3 10%, #F1F1F1 30%,  #ECECEC 50%, #E9E9E9 70%, #E6E6E6 90%, #E5E5E5 100%);
-
-	}/*.cloudText*/
-	
-	.me .cloudText .cloudArrow { position: absolute; right: -10px; top: 11px; width: 13px; height: 24px;
-		background: url(http://mmbiz.qpic.cn/mmbiz/a5icZrUmbV8pH269FXSXjfiapYTfAayiaicu1Tvdg0B8T4387f8kqkbcaVeicSF7E9sJ5qygwLCmKAIJBZib7Ep1sVOA/0) no-repeat; }
-	.me .cloudText .cloudContent {background-color:#E5E5E5;vertical-align: top;padding:7px 10px;background-color:#ECECEC\9;}
-
-	.me .cloudText .sendStatus,.me .cloudImg .sendStatus {
-		margin-top: -10px;
-	}
-	/*对方的气泡*/
-	.you .avatar { float:left; }
-	.you .cloud{ /*position:relative;8.3*/float:left; min-width:50px; max-width:300px; margin:0 0 0 15px; }
-	/*文字气泡*/
-	.you .cloudText .cloudBody { 
-		-moz-border-top-colors:none;
-		-moz-border-right-colors:none;
-		-moz-border-bottom-colors:none;
-		-moz-border-left-colors:none;
-		border-color:transparent;
-		border: 1px solid #7AA23F;
-		border-radius:5px;
-		-moz-border-radius:5px;
-		-webkit-border-radius:5px;
-		box-shadow: 0px 1px 0px #DBDBDB;
-		border:1px solid #73972a\9;border-radius:6px\9;
-		background-color: #B2CF73;
-		background: -webkit-gradient(linear, left top,left bottom, from(#C4DE94),to(#A4C363), 
-			color-stop(0.1,#B4D174),color-stop(0.2,#B2CF73),
-			color-stop(0.3,#B2CF73), color-stop(0.4,#B2CF73),
-			color-stop(0.5,#B2CF73),color-stop(0.6,#AFCC74), 
-			color-stop(0.7,#ABCA6C),color-stop(0.8,#AECA72),
-			color-stop(0.9,#A9C572),color-stop(1.0,#A4C363));
-		background-image: -moz-linear-gradient(top, #B4D174 10%, #B2CF7320%, #B2CF73 30%, #B2CF73 40%, #B2CF73 50%, #AFCC74 60%, #ABCA6C70%, #A9C572 80%, #AECA72 90%, #A4C363 100%);
-	}
-	.you .cloudText .cloudContent { 
-		padding:5px 13px\9;border-radius:13px\9; 
-		border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;
-		padding:7px 10px;
-		text-shadow:none;
-		color:#030303;
-		border-top: 1px solid #DCE6C8;	
-		border-bottom: 1px solid #B9CF8B;	
-		border-right: 1px solid #CCDEA3;
-		background-color: #C0DC85\9;
-	}
-	
-	.you .cloudText .cloudArrow { position: absolute; left: -6px; top: 11px; width: 13px; height: 24px;
-		background: url(http://mmbiz.qpic.cn/mmbiz/a5icZrUmbV8pH269FXSXjfiapYTfAayiaicuJMhxIAAaCs8QGmY6wUVTC6EnQEXlwUfCXrsjjEphb4Fwt3CFw4C9icQ/0) no-repeat; }
-        </style>
-    </head>
-    <body>
-    	<div class="wechat">
-    		<div class="chatItem you">
-			    <div class="chatItemContent">
-			        <img class="avatar" src="http://mmbiz.qpic.cn/mmbiz/a5icZrUmbV8pH269FXSXjfiapYTfAayiaicuk3KeGFaWICQEmHNowdlftNzveqhBDeFFfHxyRnf6CsNIyKwkyc8gtg/0" title="aster">
-			        <div class="cloud cloudText">
-			            <div class="cloudPannel">
-			                <div class="cloudBody">
-			                    <div class="cloudContent">
-			                    	hi,i am aster.
-			                    </div>
-			                </div>
-			                <div class="cloudArrow"></div>
-			            </div>
-			        </div>
-			    </div>
-			</div>
-			<div class="chatItem me">
-			    <div class="chatItemContent">
-			        <img class="avatar" src="http://mmbiz.qpic.cn/mmbiz/a5icZrUmbV8pH269FXSXjfiapYTfAayiaicuqb5hVHGxNPevlr3IAUGp5J50XAmalSk7zLUZicq6z7ib1X1qaultyhPg/0" title="bear">
-			        <div class="cloud cloudText">
-			            <div class="cloudPannel">
-			                <div class="cloudBody">
-			                    <div class="cloudContent">
-			                    	hi,i am bear.
-			                    </div>
-			                </div>
-			                <div class="cloudArrow"></div>
-			            </div>
-			        </div>
-			    </div>
-			</div>
-			<div class="chatItem you">
-			    <div class="chatItemContent">
-			        <img class="avatar" src="http://mmbiz.qpic.cn/mmbiz/a5icZrUmbV8pH269FXSXjfiapYTfAayiaicuJvFfuibn8eHTDGMlMI11IPPEiccyazey2OFta2iatQUeekWA9430mqic0g/0" title="xusheng">
-			        <div class="cloud cloudText">
-			            <div class="cloudPannel">
-			                <div class="cloudBody">
-			                    <div class="cloudContent">
-			                    	hi,i am xx.
-			                    </div>
-			                </div>
-			                <div class="cloudArrow"></div>
-			            </div>
-			        </div>
-			    </div>
-			</div>
-			<div class="chatItem me">
-			    <div class="chatItemContent">
-			        <img class="avatar" src="http://mmbiz.qpic.cn/mmbiz/a5icZrUmbV8pH269FXSXjfiapYTfAayiaicuMzW74TbZicaabMw8CwdjfGnDyf5F1nh1VGhfYINztpB6icSpQ6lMINng/0" title="gaby">
-			        <div class="cloud cloudText">
-			            <div class="cloudPannel">
-			                <div class="cloudBody">
-			                    <div class="cloudContent">
-			                    	hi,i am gaby.
-			                    </div>
-			                </div>
-			                <div class="cloudArrow"></div>
-			            </div>
-			        </div>
-			    </div>
-			</div>
-			<div class="chatItem you">
-			    <div class="chatItemContent">
-			        <img class="avatar" src="http://mmbiz.qpic.cn/mmbiz/a5icZrUmbV8pH269FXSXjfiapYTfAayiaicuFicBTA0OZib9PeDTMubVpyBtEwUtBicF9rrM1ncsFEVuP2DzUOoAr02IA/0" title="rongle">
-			        <div class="cloud cloudText">
-			            <div class="cloudPannel">
-			                <div class="cloudBody">
-			                    <div class="cloudContent">
-			                    	hi,i am rongle.
-			                    </div>
-			                </div>
-			                <div class="cloudArrow"></div>
-			            </div>
-			        </div>
-			    </div>
-			</div>
-    	</div>
-    </body>
+</body>
 </html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <title>wechat web rebuild team</title>
+    <link rel="stylesheet" href="./base.css?__inline"/>
+    <link rel="stylesheet" href="./bubble.css?__inline"/>
+    <link rel="stylesheet" href="./message.css?__inline"/>
+</head>
+<body>
+<div class="box">
+    <div class="box_hd">
+        <h3></h3>
+    </div>
+    <div class="box_bd">
+        {{each members as item i}}
+        <div class="message {{if i % 2 == 1}}me{{/if}}">
+            <img class="avatar" src="./avatar/{{item}}.jpg" title="{{item}}">
+            <div class="content">
+                <div class="bubble {{if i % 2 == 1}}right bubble_primary{{else}}left bubble_default{{/if}}">
+                    <p>hi, I am {{item}}.</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+<script>
+    (function(){
+        WeixinJSBridgeReady(function(){
+            var options = {
+                "img_url": "/avatar/logo.png",
+                "img_width": "108",
+                "img_height": "108",
+                "link": location.href,
+                "desc": '换个姿势切图',
+                "title": '微信重构组'
+            };
+            WeixinJSBridge.on('menu:share:timeline',function(argv){
+                WeixinJSBridge.invoke('shareTimeline', options,function(res){});
+            });
+
+            WeixinJSBridge.on('menu:share:appmessage' , function(argv){
+                WeixinJSBridge.invoke('sendAppMessage', options, function(res){})
+            });
+        });
+        /**
+         * WeixinJSBridge Ready
+         * @param {Function} callback
+         * @constructor
+         */
+        function WeixinJSBridgeReady(callback){
+            if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+                callback();
+            } else {
+                if (document.addEventListener) {
+                    document.addEventListener("WeixinJSBridgeReady", callback, false);
+                } else if (document.attachEvent) {
+                    document.attachEvent("WeixinJSBridgeReady", callback);
+                    document.attachEvent("onWeixinJSBridgeReady", callback);
+                }
+            }
+        }
+    })();
+</script>
+
+</body>
+</html>

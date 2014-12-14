@@ -1,0 +1,27 @@
+.message {
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+}
+.message .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    float: left;
+}
+.message .content {
+    overflow: hidden;
+}
+.message.me {
+    float: right;
+    text-align: right;
+    clear: right;
+}
+.message.me .avatar {
+    float: right;
+}
+.message.me .content {
+    overflow: hidden;
+}
