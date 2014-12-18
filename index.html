@@ -106,11 +106,11 @@
                 "desc": '换个姿势切图',
                 "title": '微信重构组'
             };
-            WeixinJSBridge.on('menu:share:timeline',function(argv){
+            WeixinJSBridge.on('menu:share:timeline',function(){
                 WeixinJSBridge.invoke('shareTimeline', options,function(res){});
             });
 
-            WeixinJSBridge.on('menu:share:appmessage' , function(argv){
+            WeixinJSBridge.on('menu:share:appmessage' , function(){
                 WeixinJSBridge.invoke('sendAppMessage', options, function(res){})
             });
         });
