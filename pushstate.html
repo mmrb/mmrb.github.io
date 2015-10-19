@@ -10,6 +10,7 @@
 <br/>
 <a href="#hash2">hash2</a>
 <br/>
+<a href="javascript:;" id="push">push state</a>
 <br/>
 <br/>
 <div id="output"></div>
@@ -17,11 +18,16 @@
     var $output = document.querySelector('#output');
     window.addEventListener('load', function (){
         $output.innerHTML += 'time: ' + new Date().getTime() + ' page load<br>';
-    });
+    }, false);
 
     window.addEventListener('hashchange', function (){
         $output.innerHTML += 'time: ' + new Date().getTime() + ' hashchange<br>';
-    });
+    }, false);
+
+    document.querySelector('#push').addEventListener('click', function (){
+        var stateObj = { foo: "bar" };
+        history.pushState(stateObj, "page 2", "bar.html");
+    }, false);
 </script>
 </body>
 </html>
