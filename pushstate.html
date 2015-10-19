@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta charset="UTF-8">
+    <title>pushstate test</title>
+</head>
+<body>
+<a href="#hash1">hash1</a>
+<br/>
+<a href="#hash2">hash2</a>
+<br/>
+<br/>
+<br/>
+<div id="output"></div>
+<script>
+    var $output = document.querySelector('#output');
+    window.addEventListener('load', function (){
+        $output.innerHTML += 'time: ' + new Date().getTime() + ' page load<br>';
+    });
+
+    window.addEventListener('hashchange', function (){
+        $output.innerHTML += 'time: ' + new Date().getTime() + ' hashchange load<br>';
+    });
+</script>
+</body>
+</html>
