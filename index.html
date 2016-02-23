@@ -5,14 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
     <title>wechat web rebuild team</title>
     <style>
-*{margin:0;padding:0}body{font:14px/1.5em "微软雅黑",Helvetica,"Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;background:#EEE}.box{padding:15px;overflow:hidden;max-width:850px;margin:0 auto}
-</style>
-    <style>
-.bubble{max-width:500px;display:inline-block;vertical-align:top;position:relative;text-align:left;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;padding:8px 13px;margin:0 10px}.bubble.bubble_default{background-color:#fff}.bubble:after,.bubble:before{position:absolute;top:12px;border:7px solid transparent;content:" "}.bubble.left:after,.bubble.left:before{right:100%}.bubble.left:before{border-right-color:#FFF;margin-right:1px}.bubble.left:after{border-right-color:#FFF}.bubble.right:after,.bubble.right:before{left:100%}.bubble.right:before{border-left-color:#000}.bubble.right:after{border-left-color:#FFF}.bubble.bubble_primary{background-color:#b2e281;background-image:-moz-linear-gradient(top,#b2e281 0,#b2e281 100%);background-image:-webkit-gradient(linear,0 0,0 100%,from(#b2e281),to(#b2e281));background-image:-webkit-linear-gradient(top,#b2e281 0,#b2e281 100%);background-image:-o-linear-gradient(top,#b2e281 0,#b2e281 100%);background-image:linear-gradient(to bottom,#b2e281 0,#b2e281 100%);border-color:#75bf50}.bubble.bubble_primary.left:before{border-right-color:#000}.bubble.bubble_primary.left:after{border-right-color:#b2e281}.bubble.bubble_primary.right:before{border-left-color:#75bf50;margin-left:0}.bubble.bubble_primary.right:after{border-left-color:#b2e281}.bubble_hd{border-bottom:1px solid #cfcfcf;padding-bottom:7px}.bubble_cont{padding-top:7px}.bubble_cont li{overflow:hidden;color:#888}.bubble_cont .avatar{float:left;margin-right:10px;width:40px;height:40px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}.bubble_cont .meta,.bubble_cont .msg{float:left}.bubble_cont .msg{margin-left:5px;width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;height:1.6em}.bubble_cont .time{display:none}.bubble_cont .list{overflow:hidden}.bubble.expand li{margin-bottom:15px}.bubble.expand .avatar{display:none}.bubble.expand .meta,.bubble.expand .msg{float:none}.bubble.expand .user{color:#000}.bubble.expand .time{float:right;color:#888;display:block}.bubble.expand .msg{color:#888;width:auto;height:auto;white-space:normal}
-</style>
-    <style>
-.message{margin-bottom:20px;float:left;width:100%}.message .avatar{width:40px;height:40px;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;float:left}.message .content{overflow:hidden}.message.me{float:right;text-align:right;clear:right}.message.me .avatar{float:right}.message.me .content{overflow:hidden}
-</style>
+        *{margin:0;padding:0}body{font:14px/1.5em Helvetica Neue,Helvetica,Hiragino Sans GB,Microsoft YaHei,微软雅黑,Arial,sans-serif;background:#eee}.box{padding:15px;overflow:hidden;max-width:850px;margin:0 auto}.bubble{max-width:500px;display:inline-block;vertical-align:top;position:relative;text-align:left;border-radius:3px;padding:8px 13px;margin:0 10px}.bubble.bubble_default{background-color:#fff}.bubble:after,.bubble:before{position:absolute;top:12px;border:7px solid transparent;content:" "}.bubble.left:after,.bubble.left:before{right:100%}.bubble.left:before{margin-right:1px}.bubble.left:after,.bubble.left:before{border-right-color:#fff}.bubble.right:after,.bubble.right:before{left:100%}.bubble.right:before{border-left-color:#000}.bubble.right:after{border-left-color:#fff}.bubble.bubble_primary{background-color:#b2e281;background-image:-webkit-gradient(linear,0 0,0 100%,from(#b2e281),to(#b2e281));background-image:-webkit-linear-gradient(top,#b2e281,#b2e281);background-image:linear-gradient(180deg,#b2e281 0,#b2e281);border-color:#75bf50}.bubble.bubble_primary.left:before{border-right-color:#000}.bubble.bubble_primary.left:after{border-right-color:#b2e281}.bubble.bubble_primary.right:before{border-left-color:#75bf50;margin-left:0}.bubble.bubble_primary.right:after{border-left-color:#b2e281}.bubble_hd{border-bottom:1px solid #cfcfcf;padding-bottom:7px}.bubble_cont{padding-top:7px}.bubble_cont li{overflow:hidden;color:#888}.bubble_cont .avatar{float:left;margin-right:10px;width:40px;height:40px;border-radius:2px}.bubble_cont .meta,.bubble_cont .msg{float:left}.bubble_cont .msg{margin-left:5px;width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;height:1.6em}.bubble_cont .time{display:none}.bubble_cont .list{overflow:hidden}.bubble.expand li{margin-bottom:15px}.bubble.expand .avatar{display:none}.bubble.expand .meta,.bubble.expand .msg{float:none}.bubble.expand .user{color:#000}.bubble.expand .time{float:right;color:#888;display:block}.bubble.expand .msg{color:#888;width:auto;height:auto;white-space:normal}.message{margin-bottom:20px;float:left;width:100%}.message .avatar{width:40px;height:40px;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;float:left}.message .content{overflow:hidden}.message.me{float:right;text-align:right;clear:right}.message.me .avatar{float:right}.message.me .content{overflow:hidden}
+    </style>
 </head>
 <body>
 <div class="box">
@@ -20,119 +14,88 @@
         <h3></h3>
     </div>
     <div class="box_bd">
-        
         <div class="message ">
             <img class="avatar" src="./avatar/shenfei.jpg" title="shenfei">
             <div class="content">
                 <div class="bubble left bubble_default">
                     <p>hi, I am shenfei.</p>
-                    
+
                 </div>
             </div>
         </div>
-        
+
         <div class="message me">
             <img class="avatar" src="./avatar/rongle.jpg" title="rongle">
             <div class="content">
                 <div class="bubble right bubble_primary">
                     <p>hi, I am rongle.</p>
-                    
+
                 </div>
             </div>
         </div>
-        
+
         <div class="message ">
             <img class="avatar" src="./avatar/gaby.jpg" title="gaby">
             <div class="content">
                 <div class="bubble left bubble_default">
                     <p>hi, I am gaby.</p>
-                    
+
                 </div>
             </div>
         </div>
-        
+
         <div class="message me">
             <img class="avatar" src="./avatar/aster.jpg" title="aster">
             <div class="content">
                 <div class="bubble right bubble_primary">
                     <p>hi, I am aster.</p>
-                    
+
                 </div>
             </div>
         </div>
-        
+
         <div class="message ">
             <img class="avatar" src="./avatar/bear.jpg" title="bear">
             <div class="content">
                 <div class="bubble left bubble_default">
                     <p>hi, I am bear.</p>
-                    
+
                 </div>
             </div>
         </div>
-        
+
         <div class="message me">
             <img class="avatar" src="./avatar/xx.jpg" title="xx">
             <div class="content">
                 <div class="bubble right bubble_primary">
                     <p>hi, I am xx.</p>
-                    
+
                     <p>A sword can penetrate a lot of people.</p>
-                    
+
                 </div>
             </div>
         </div>
-        
+
         <div class="message ">
             <img class="avatar" src="./avatar/jf.jpg" title="jf">
             <div class="content">
                 <div class="bubble left bubble_default">
                     <p>hi, I am jf.</p>
-                    
+
                 </div>
             </div>
         </div>
-        
+
+        <div class="message me">
+            <img class="avatar" src="./avatar/kl.jpg" title="kl">
+            <div class="content">
+                <div class="bubble right bubble_primary">
+                    <p>hi, I am kl.</p>
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<script>
-    (function(){
-        WeixinJSBridgeReady(function(){
-            var options = {
-                "img_url": "http://mmrb.github.io/avatar/logo.png",
-                "img_width": "108",
-                "img_height": "108",
-                "link": location.href,
-                "desc": '换个姿势切图',
-                "title": '微信重构组'
-            };
-            WeixinJSBridge.on('menu:share:timeline',function(){
-                WeixinJSBridge.invoke('shareTimeline', options,function(res){});
-            });
-
-            WeixinJSBridge.on('menu:share:appmessage' , function(){
-                WeixinJSBridge.invoke('sendAppMessage', options, function(res){})
-            });
-        });
-        /**
-         * WeixinJSBridge Ready
-         * @param {Function} callback
-         * @constructor
-         */
-        function WeixinJSBridgeReady(callback){
-            if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
-                callback();
-            } else {
-                if (document.addEventListener) {
-                    document.addEventListener("WeixinJSBridgeReady", callback, false);
-                } else if (document.attachEvent) {
-                    document.attachEvent("WeixinJSBridgeReady", callback);
-                    document.attachEvent("onWeixinJSBridgeReady", callback);
-                }
-            }
-        }
-    })();
-</script>
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=45143052" charset="UTF-8"></script>
 </body>
 </html>
