@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
     <title>wechat web rebuild team</title>
-    <link rel="stylesheet" href="./base.css?__inline"/>
-    <link rel="stylesheet" href="./bubble.css?__inline"/>
-    <link rel="stylesheet" href="./message.css?__inline"/>
+    <link rel="stylesheet" href="./base.css"/>
+    <link rel="stylesheet" href="./bubble.css"/>
+    <link rel="stylesheet" href="./message.css"/>
 </head>
 <body>
 <div class="box">
@@ -14,59 +14,78 @@
         <h3></h3>
     </div>
     <div class="box_bd">
-        {{each members as item i}}
-        <div class="message {{if i % 2 == 1}}me{{/if}}">
-            <img class="avatar" src="./avatar/{{item}}.jpg" title="{{item}}">
+        <div class="message ">
+            <img class="avatar" src="./avatar/shenfei.jpg" title="shenfei">
             <div class="content">
-                <div class="bubble {{if i % 2 == 1}}right bubble_primary{{else}}left bubble_default{{/if}}">
-                    <p>hi, I am {{item}}.</p>
-                    {{if item == 'xx'}}
-                    <p>A sword can penetrate a lot of people.</p>
-                    {{/if}}
+                <div class="bubble left bubble_default">
+                    <p>hi, I am shenfei.</p>
+
                 </div>
             </div>
         </div>
-        {{/each}}
+
+        <div class="message me">
+            <img class="avatar" src="./avatar/rongle.jpg" title="rongle">
+            <div class="content">
+                <div class="bubble right bubble_primary">
+                    <p>hi, I am rongle.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="message ">
+            <img class="avatar" src="./avatar/gaby.jpg" title="gaby">
+            <div class="content">
+                <div class="bubble left bubble_default">
+                    <p>hi, I am gaby.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="message me">
+            <img class="avatar" src="./avatar/aster.jpg" title="aster">
+            <div class="content">
+                <div class="bubble right bubble_primary">
+                    <p>hi, I am aster.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="message ">
+            <img class="avatar" src="./avatar/bear.jpg" title="bear">
+            <div class="content">
+                <div class="bubble left bubble_default">
+                    <p>hi, I am bear.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="message me">
+            <img class="avatar" src="./avatar/xx.jpg" title="xx">
+            <div class="content">
+                <div class="bubble right bubble_primary">
+                    <p>hi, I am xx.</p>
+
+                    <p>A sword can penetrate a lot of people.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="message ">
+            <img class="avatar" src="./avatar/jf.jpg" title="jf">
+            <div class="content">
+                <div class="bubble left bubble_default">
+                    <p>hi, I am jf.</p>
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<script>
-    (function(){
-        WeixinJSBridgeReady(function(){
-            var options = {
-                "img_url": "http://mmrb.github.io/avatar/logo.png",
-                "img_width": "108",
-                "img_height": "108",
-                "link": location.href,
-                "desc": '换个姿势切图',
-                "title": '微信重构组'
-            };
-            WeixinJSBridge.on('menu:share:timeline',function(){
-                WeixinJSBridge.invoke('shareTimeline', options,function(res){});
-            });
-
-            WeixinJSBridge.on('menu:share:appmessage' , function(){
-                WeixinJSBridge.invoke('sendAppMessage', options, function(res){})
-            });
-        });
-        /**
-         * WeixinJSBridge Ready
-         * @param {Function} callback
-         * @constructor
-         */
-        function WeixinJSBridgeReady(callback){
-            if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
-                callback();
-            } else {
-                if (document.addEventListener) {
-                    document.addEventListener("WeixinJSBridgeReady", callback, false);
-                } else if (document.attachEvent) {
-                    document.attachEvent("WeixinJSBridgeReady", callback);
-                    document.attachEvent("onWeixinJSBridgeReady", callback);
-                }
-            }
-        }
-    })();
-</script>
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=45143052" charset="UTF-8"></script>
 </body>
 </html>
